@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<WorkGiverDef>
+		<defName>UnloadCarriersByCart</defName>
+		<label>unload carriers</label>
+		<giverClass>Carts.WorkGiver_UnloadCarriersByCart</giverClass>
+		<workType>Hauling</workType>
+		<verb>unload</verb>
+		<gerund>unloading carriers by</gerund>
+		<priorityInType>135</priorityInType>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+		<canBeDoneByMechs>true</canBeDoneByMechs>
+	</WorkGiverDef>
+	
+	<WorkGiverDef>
+		<defName>LoadTransportersByCart</defName>
+		<label>load transporters</label>
+		<giverClass>Carts.WorkGiver_LoadTransportersByCart</giverClass>
+		<workType>Hauling</workType>
+		<verb>load transporters</verb>
+		<gerund>loading transporters by</gerund>
+		<priorityInType>115</priorityInType>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+	</WorkGiverDef>
+	
+	<WorkGiverDef>
+		<defName>HaulToPortalByCart</defName>
+		<label>haul to map</label>
+		<giverClass>Carts.WorkGiver_HaulToPortalByCart</giverClass>
+		<workType>Hauling</workType>
+		<verb>load portal</verb>
+		<gerund>loading portal by</gerund>
+		<priorityInType>109</priorityInType>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+	</WorkGiverDef>
+	
+	<WorkGiverDef>
+		<defName>HaulCorpsesByCart</defName>
+		<label>push loader</label>
+		<giverClass>Carts.WorkGiver_HaulCorpsesByCart</giverClass>
+		<workType>Hauling</workType>
+		<verb>hauling</verb>
+		<gerund>hauling corpses by</gerund>
+		<priorityInType>95</priorityInType>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+	</WorkGiverDef>
+	
+	<WorkGiverDef>
+		<defName>ConstructHaulToContainerByCart</defName>
+		<label>construct deliver resources to frames or blueprints</label>
+		<giverClass>Carts.WorkGiver_HaulToContainerByCart</giverClass>
+		<workType>Construction</workType>
+		<priorityInType>75</priorityInType>
+		<verb>deliver resources</verb>
+		<gerund>deliver resources to frames by</gerund>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+		<nonColonistsCanDo>true</nonColonistsCanDo>
+		<prioritizeSustains>true</prioritizeSustains>
+		<equivalenceGroup>AssistInConstruction</equivalenceGroup>
+	</WorkGiverDef>
+	
+	<WorkGiverDef>
+		<defName>HaulToContainerByCart</defName>
+		<label>deliver resources to frames or blueprints</label>
+		<giverClass>Carts.WorkGiver_HaulToContainerByCart</giverClass>
+		<workType>Hauling</workType>
+		<priorityInType>12</priorityInType>
+		<verb>deliver resources</verb>
+		<gerund>delivering resources to frames by</gerund>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+		<nonColonistsCanDo>true</nonColonistsCanDo>
+		<prioritizeSustains>true</prioritizeSustains>
+		<equivalenceGroup>AssistInConstruction</equivalenceGroup>
+	</WorkGiverDef>
+	
+	<WorkGiverDef>
+		<defName>PushCart</defName>
+		<label>push cart</label>
+		<giverClass>Carts.WorkGiver_PushCart</giverClass>
+		<workType>Hauling</workType>
+		<priorityInType>18</priorityInType>
+		<verb>haul</verb>
+		<gerund>hauling by</gerund>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+		<directOrderable>true</directOrderable>
+		<emergency>false</emergency>
+	</WorkGiverDef>
+</Defs>
+

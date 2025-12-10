@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<packageId>Exstarzii.Carts</packageId>
+	<name>Carts</name>
+	<author>Exstarzii</author>
+	<supportedVersions>
+		<li>1.6</li>
+	</supportedVersions>
+	<forceLoadAfter>
+		<li>brrainz.harmony</li>
+		<li>Ludeon.RimWorld</li>
+		<li>Ludeon.RimWorld.Biotech</li>
+	</forceLoadAfter>
+	<description>Improve your colony’s hauling! This mod adds Carts for carrying up to 5 stacks of normal items and Loaders for transporting up to 3 stacks of large items like corpses, stone chunks, minified buildings, and wastepacks.</description>
+	<modDependencies>
+		<li>
+			<packageId>brrainz.harmony</packageId>
+			<displayName>Harmony</displayName>
+			<steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
+			<downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
+		</li>
+	</modDependencies>
+</ModMetaData>

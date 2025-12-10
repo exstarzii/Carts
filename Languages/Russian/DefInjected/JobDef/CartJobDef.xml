@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+	<UnloadCarriersByCart.reportString>разгружает вещи в TargetB.</UnloadCarriersByCart.reportString>
+	<LoadTransportersByCart.reportString>загружает транспортер в TargetB.</LoadTransportersByCart.reportString>
+	<HaulToPortalByCart.reportString>несет предметы к порталу в TargetB.</HaulToPortalByCart.reportString>
+	<HaulCorpsesByCart.reportString>несет трупы в TargetB.</HaulCorpsesByCart.reportString>
+	<HaulToContainerByCart.reportString>несет ресуры на проекты в TargetB.</HaulToContainerByCart.reportString>
+	<PushCart.reportString>переносит предметы в TargetB.</PushCart.reportString>
+</LanguageData>

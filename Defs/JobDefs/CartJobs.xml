@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<JobDef>
+		<defName>UnloadCarriersByCart</defName>
+		<driverClass>Carts.JobDriver_PushCart</driverClass>
+		<reportString>unloading carriers by TargetB.</reportString>
+		<casualInterruptible>true</casualInterruptible>
+		<playerInterruptible>true</playerInterruptible>
+	</JobDef>
+	
+	<JobDef>
+		<defName>LoadTransportersByCart</defName>
+		<driverClass>Carts.JobDriver_HaulToContainerByCart</driverClass>
+		<reportString>loading transporters by TargetB.</reportString>
+		<casualInterruptible>true</casualInterruptible>
+		<playerInterruptible>true</playerInterruptible>
+	</JobDef>
+	
+	<JobDef>
+		<defName>HaulToPortalByCart</defName>
+		<driverClass>Carts.JobDriver_HaulToContainerByCart</driverClass>
+		<reportString>loading portal by TargetB.</reportString>
+		<casualInterruptible>true</casualInterruptible>
+		<playerInterruptible>true</playerInterruptible>
+	</JobDef>
+	
+	<JobDef>
+		<defName>HaulCorpsesByCart</defName>
+		<driverClass>Carts.JobDriver_PushCart</driverClass>
+		<reportString>hauling corpses by TargetB.</reportString>
+		<casualInterruptible>true</casualInterruptible>
+		<playerInterruptible>true</playerInterruptible>
+	</JobDef>
+		
+	<JobDef>
+		<defName>HaulToContainerByCart</defName>
+		<driverClass>Carts.JobDriver_HaulToContainerByCart</driverClass>
+		<reportString>delivering resources to frames by TargetB.</reportString>
+		<casualInterruptible>true</casualInterruptible>
+		<playerInterruptible>true</playerInterruptible>
+	</JobDef>
+	
+	<JobDef>
+		<defName>PushCart</defName>
+		<driverClass>Carts.JobDriver_PushCart</driverClass>
+		<reportString>hauling by TargetB.</reportString>
+		<casualInterruptible>true</casualInterruptible>
+		<playerInterruptible>true</playerInterruptible>
+	</JobDef>
+	
+</Defs>

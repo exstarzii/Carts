@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef Name="CartBase" ParentName="FurnitureBase" Abstract="True">
+		<thingClass>Carts.Building_Cart</thingClass>
+		<altitudeLayer>Item</altitudeLayer>
+		<designationCategory>Furniture</designationCategory>
+		<designationHotKey>Misc12</designationHotKey>
+		<useHitPoints>true</useHitPoints>
+		<selectable>true</selectable>
+		<passability>PassThroughOnly</passability>
+		<fillPercent>0.4</fillPercent>
+		<pathCost>50</pathCost>
+		<stuffCategories/>
+		<stuffCategories>
+			<li>Metallic</li>
+		</stuffCategories>
+		<defaultPlacingRot>North</defaultPlacingRot>
+		<statBases>
+			<Flammability>1.0</Flammability>
+		</statBases>
+		<building>
+			<storageGroupTag>Shelf</storageGroupTag>
+			<preventDeteriorationOnTop>true</preventDeteriorationOnTop>
+			<ignoreStoredThingsBeauty>true</ignoreStoredThingsBeauty>
+			<blueprintClass>Carts.Blueprint_Cart</blueprintClass>
+			<paintable>true</paintable>
+			<uninstallWork>0</uninstallWork>
+		</building>
+		<constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+		<inspectorTabs>
+			<li>ITab_Storage</li>
+			<li>Carts.ITab_CartContents</li>
+		</inspectorTabs>
+
+		<surfaceType>Item</surfaceType>
+		<canOverlapZones>false</canOverlapZones>
+		<researchPrerequisites>
+			<li>ComplexFurniture</li>
+		</researchPrerequisites>
+		<uiOrder>2050</uiOrder>
+		<!-- To group with outfit stand -->
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+		</comps>
+	</ThingDef>
+	
+	<ThingDef ParentName="CartBase" Class="Carts.ThingDef_Cart">
+		<defName>Building_Cart</defName>
+		<label>cart</label>
+		<cartMaxItems>5</cartMaxItems>
+		<description>Cart for carrying up to five items</description>
+		<building>
+			<fixedStorageSettings>
+				<filter>
+					<disallowNotEverStorable>true</disallowNotEverStorable>
+					<categories>
+						<li>Root</li>
+					</categories>
+					<disallowedCategories>
+						<li>Chunks</li>
+						<li>Plants</li>
+						<li>Buildings</li>
+					</disallowedCategories>
+					<disallowedThingDefs MayRequire="Ludeon.RimWorld.Biotech">
+						<li MayRequire="Ludeon.RimWorld.Biotech">Wastepack</li>
+					</disallowedThingDefs>
+					<specialFiltersToDisallow>
+						<li>AllowLargeCorpses</li>
+					</specialFiltersToDisallow>
+				</filter>
+			</fixedStorageSettings>
+			<defaultStorageSettings>
+				<priority>Low</priority>
+				<filter>
+					<categories>
+						<li>Foods</li>
+						<li>Manufactured</li>
+						<li>ResourcesRaw</li>
+						<li>Items</li>
+						<li>Weapons</li>
+						<li>Apparel</li>
+						<li>BodyParts</li>
+					</categories>
+				</filter>
+			</defaultStorageSettings>
+		</building>
+		<graphicData>
+			<texPath>Cart/Cart</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(1, 1)</drawSize>
+			<shadowData>
+				<volume>(0.18, 0.23, 0.18)</volume>
+			</shadowData>
+		</graphicData>
+		<cartFullGraphicData>
+			<texPath>Cart/CartFull</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(1, 1)</drawSize>
+		</cartFullGraphicData>
+		<costStuffCount>40</costStuffCount>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<WorkToBuild>5000</WorkToBuild>
+			<Mass>16</Mass>
+		</statBases>
+	</ThingDef>
+	
+	<ThingDef ParentName="CartBase" Class="Carts.ThingDef_Cart">
+		<defName>Building_Loader</defName>
+		<label>loader</label>
+		<cartMaxItems>3</cartMaxItems>
+		<description>Loader for carrying up to three large items</description>
+		<building>
+			<fixedStorageSettings>
+				<filter>
+					<disallowNotEverStorable>true</disallowNotEverStorable>
+					<categories>
+						<li>Chunks</li>
+						<li>Buildings</li>
+						<li>Corpses</li>
+					</categories>
+					<thingDefs MayRequire="Ludeon.RimWorld.Biotech">
+						<li MayRequire="Ludeon.RimWorld.Biotech">Wastepack</li>
+					</thingDefs>
+					<disallowedThingDefs>
+						<li>Building_Cart</li>
+						<li>Building_Loader</li>
+					</disallowedThingDefs>
+				</filter>
+			</fixedStorageSettings>
+			<defaultStorageSettings>
+				<priority>Low</priority>
+				<filter>
+					<categories>
+						<li>Buildings</li>
+						<li>Corpses</li>
+					</categories>
+					<thingDefs MayRequire="Ludeon.RimWorld.Biotech">
+						<li MayRequire="Ludeon.RimWorld.Biotech">Wastepack</li>
+					</thingDefs>
+				</filter>
+			</defaultStorageSettings>
+		</building>
+		<graphicData>
+			<texPath>Loader/Loader</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(2, 2)</drawSize>
+			<shadowData>
+				<volume>(0.18, 0.23, 0.18)</volume>
+			</shadowData>
+		</graphicData>
+		<cartFullGraphicData>
+			<texPath>Loader/LoaderFull</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(2, 2)</drawSize>
+		</cartFullGraphicData>
+		<size>(1,1)</size>
+		<uiIconScale>0.8</uiIconScale>
+		<costStuffCount>80</costStuffCount>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<WorkToBuild>8000</WorkToBuild>
+			<Mass>32</Mass>
+		</statBases>
+	</ThingDef>
+</Defs>

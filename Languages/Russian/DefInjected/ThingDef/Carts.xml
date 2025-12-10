@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+	<Building_Cart.label>тележка</Building_Cart.label>
+	<Building_Cart.description>тележка для перевозки до пяти предметов</Building_Cart.description>
+	
+	<Building_Loader.label>погрузчик</Building_Loader.label>
+	<Building_Loader.description>погрузчик для перевозки до трех предметов</Building_Loader.description>
+</LanguageData>

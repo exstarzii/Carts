@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E7770EE5-B39B-4459-9BC6-9EE37CC6DE10}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Carts</RootNamespace>
+    <AssemblyName>Carts</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>false</DebugSymbols>
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Assemblies\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>..\..\HarmonyMod\1.5\Assemblies\0Harmony.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\..\..\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\..\RimWorldWin64_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Blueprint_Cart.cs" />
+    <Compile Include="Building_Cart.cs" />
+    <Compile Include="CartsMod.cs" />
+    <Compile Include="CartUtility.cs" />
+    <Compile Include="Patches\Patch_JobGiver_HaulToPortal_TryGiveJob.cs" />
+    <Compile Include="Patches\Patch_MapPortal_AnyPawnCanLoadAnythingNow.cs" />
+    <Compile Include="Patches\Patch_ITab_ContentsTransporter_EndJobForEveryoneHauling.cs" />
+    <Compile Include="Patches\Patch_ITab_ContentsMapPortal_EndJobForEveryoneHauling.cs" />
+    <Compile Include="Patches\Patch_CompTransporter_AnyPawnCanLoadAnythingNow.cs" />
+    <Compile Include="Patches\Patch_Dialog_LoadTransporters_TryAccept.cs" />
+    <Compile Include="Patches\Patch_JobGiver_EnterTransporter_TryGiveJob.cs" />
+    <Compile Include="Patches\Patch_EnterPortalUtility_FindThingToLoad.cs" />
+    <Compile Include="Patches\Patch_LoadTransportersJobUtility_FindThingToLoad.cs" />
+    <Compile Include="Patches\Patch_EnterPortalUtility_ThingsBeingHauledTo.cs" />
+    <Compile Include="Patches\Patch_JobGiver_LoadTransporters_TryGiveJob.cs" />
+    <Compile Include="Patches\Patch_TransporterUtility_ThingsBeingHauledTo.cs" />
+    <Compile Include="ITab_CartContents.cs" />
+    <Compile Include="JobDriver_HaulToContainerByCart.cs" />
+    <Compile Include="JobDriver_PushCart.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Toils_Cart.cs" />
+    <Compile Include="VirtualCart.cs" />
+    <Compile Include="WorkGiver_HaulCorpsesByCart.cs" />
+    <Compile Include="WorkGiver_HaulToContainerByCart.cs" />
+    <Compile Include="WorkGiver_HaulToPortalByCart.cs" />
+    <Compile Include="WorkGiver_LoadTransportersByCart.cs" />
+    <Compile Include="WorkGiver_UnloadCarriersByCart.cs" />
+    <Compile Include="WorkGiver_PushCart.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

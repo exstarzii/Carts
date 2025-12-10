@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+	<PushCart.label>переноска предметов в</PushCart.label>
+	<PushCart.verb>переносить предметы в</PushCart.verb>
+	<PushCart.gerund>переносить предметы в</PushCart.gerund>
+	
+	<HaulToContainerByCart.label>нести ресуры в</HaulToContainerByCart.label>
+	<HaulToContainerByCart.verb>несет ресуры в</HaulToContainerByCart.verb>
+	<HaulToContainerByCart.gerund>нести ресуры в</HaulToContainerByCart.gerund>
+	
+	<ConstructHaulToContainerByCart.label>несет ресуры в</ConstructHaulToContainerByCart.label>
+	<ConstructHaulToContainerByCart.verb>несет ресуры в</ConstructHaulToContainerByCart.verb>
+	<ConstructHaulToContainerByCart.gerund>нести ресуры в</ConstructHaulToContainerByCart.gerund>
+	
+	<HaulCorpsesByCart.label>несет трупы в</HaulCorpsesByCart.label>
+	<HaulCorpsesByCart.verb>несет трупы в</HaulCorpsesByCart.verb>
+	<HaulCorpsesByCart.gerund>нести трупы в</HaulCorpsesByCart.gerund>
+	
+	<LoadTransportersByCart.label>загрузка предметов в</LoadTransportersByCart.label>
+	<LoadTransportersByCart.verb>загружает предметы в</LoadTransportersByCart.verb>
+	<LoadTransportersByCart.gerund>загружать предметы в</LoadTransportersByCart.gerund>
+	
+	<HaulToPortalByCart.label>нести предметы в</HaulToPortalByCart.label>
+	<HaulToPortalByCart.verb>несет предметы в</HaulToPortalByCart.verb>
+	<HaulToPortalByCart.gerund>нести предметы в</HaulToPortalByCart.gerund>
+	
+	<UnloadCarriersByCart.label>разгрузка вещей в</UnloadCarriersByCart.label>
+	<UnloadCarriersByCart.verb>разгружает вещи в</UnloadCarriersByCart.verb>
+	<UnloadCarriersByCart.gerund>разгружать вещи в</UnloadCarriersByCart.gerund>
+</LanguageData>
